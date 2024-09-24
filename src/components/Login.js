@@ -11,7 +11,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const authorizeUser = (token) => {
-    fetch(`http://localhost:8080/api/v1/demo-controller`, {
+    fetch(`https://authorizationbackend-production-9b62.up.railway.app/api/v1/demo-controller`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token.token}`,
@@ -35,7 +35,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Make API call to log in the user
-    fetch(`http://localhost:8080/api/v1/auth/authenticate`, {
+    fetch(`https://authorizationbackend-production-9b62.up.railway.app/api/v1/auth/authenticate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

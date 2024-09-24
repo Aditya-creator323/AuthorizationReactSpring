@@ -19,7 +19,7 @@ export default function Signup() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`http://localhost:8080/api/v1/auth/register`, {
+    fetch(`https://authorizationbackend-production-9b62.up.railway.app/api/v1/auth/register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
